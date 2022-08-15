@@ -1,0 +1,154 @@
+import { Meta } from '@storybook/addon-docs';
+import Table from '../Table';
+import Text from '../Text';
+import Documentation from '../Documentation';
+import Link from '@mui/material/Link';
+
+<Meta title="Utils/Row/Doc" />
+
+# The Row component
+
+The `Row` component renders its children in a responive manner by placing them in a set of columns. You should note that only direct children
+are responsively rendered. So you must use it as follows..
+
+```jsx
+<Row {...props}>
+  <Child1 />
+  <Child2 />
+  <Child3 />
+  <Child4 />
+  <ChildN />
+</Row>
+```
+
+<Text variant="h6" fontWeight="bold">
+  props
+</Text>
+<Documentation
+  rules={[
+    {
+      startsWith: '_',
+      endsWith: '_',
+      Decorator: ({ match }) => <code>{match}</code>,
+    },
+  ]}
+>
+  <Table
+    TableContainerProps={{ mt: 2 }}
+    thead={['prop', 'description', 'type', 'default']}
+    tbody={[
+      ['col', 'Default number of columns', 'number', 1],
+      [
+        'col-xsm',
+        'Number of columns for extra-small screen sizes',
+        'number',
+        'value of col',
+      ],
+      [
+        'col-sm',
+        'Number of columns for small screen sizes',
+        'number',
+        'value of col',
+      ],
+      [
+        'col-md',
+        'Number of columns for medium screen sizes',
+        'number',
+        'value of col',
+      ],
+      [
+        'col-lg',
+        'Number of columns for large screen sizes',
+        'number',
+        'value of col',
+      ],
+      [
+        'col-xlg',
+        'Number of columns for extra-large screen sizes',
+        'number',
+        'value of col',
+      ],
+      [
+        'sx-xsm',
+        'sx props to apply to the Row component when screen size is extra-small',
+        <Link
+          href="https://mui.com/system/getting-started/the-sx-prop"
+          target="_blank"
+        >
+          SxProps
+        </Link>,
+        'null',
+      ],
+      [
+        'sx-sm',
+        'sx props to apply to the Row component when screen size is small',
+        <Link
+          href="https://mui.com/system/getting-started/the-sx-prop"
+          target="_blank"
+        >
+          SxProps
+        </Link>,
+        'null',
+      ],
+      [
+        'sx-md',
+        'sx props to apply to the Row component when screen size is medium',
+        <Link
+          href="https://mui.com/system/getting-started/the-sx-prop"
+          target="_blank"
+        >
+          SxProps
+        </Link>,
+        'null',
+      ],
+      [
+        'sx-lg',
+        'sx props to apply to the Row component when screen size is large',
+        <Link
+          href="https://mui.com/system/getting-started/the-sx-prop"
+          target="_blank"
+        >
+          SxProps
+        </Link>,
+        'null',
+      ],
+      [
+        'sx-xlg',
+        'sx props to apply to the Row component when screen size is extra-large',
+        <Link
+          href="https://mui.com/system/getting-started/the-sx-prop"
+          target="_blank"
+        >
+          SxProps
+        </Link>,
+        'null',
+      ],
+      [
+        'header',
+        'Placed at the top of the Row and is not affected by screen size',
+        'ReactNode',
+        'null',
+      ],
+      [
+        '`footer`',
+        'Placed at the top of the Row and is not affected by screen size',
+        '`ReactNode`',
+        '`null`',
+      ],
+      [
+        'noTrailingSpace',
+        'With this prop set to true, if the _last row does_ not have as many columns as the previous rows, then the available columns stretch out to fill the remaining gap',
+        '`boolean`',
+        '`false`',
+      ],
+      [
+        '`...rest`',
+        'The rest of the props would be applied to the Row component which is an MUI Box component',
+        <Link href="https://mui.com/system/properties/" target="_blank">
+          BoxProps
+        </Link>,
+        '`null`',
+      ],
+    ]}
+  />
+</Documentation>

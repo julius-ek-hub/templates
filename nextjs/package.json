@@ -1,0 +1,56 @@
+{
+  "name": "nextjs",
+  "version": "5.0.0",
+  "private": true,
+  "engines": {
+    "node": "16.x",
+    "npm": "8.x",
+    "yarn": "please-use-npm"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prettier": "prettier --write . ",
+    "prepare": "husky install",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "@emotion/cache": "latest",
+    "@emotion/react": "latest",
+    "@emotion/server": "latest",
+    "@emotion/styled": "latest",
+    "@mui/icons-material": "^5.8.4",
+    "@mui/material": "latest",
+    "@mui/x-date-pickers": "^5.0.0-beta.4",
+    "dayjs": "^1.11.4",
+    "formik": "^2.2.9",
+    "next": "latest",
+    "prop-types": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@storybook/addon-actions": "^6.5.10",
+    "@storybook/addon-essentials": "^6.5.10",
+    "@storybook/addon-interactions": "^6.5.10",
+    "@storybook/addon-links": "^6.5.10",
+    "@storybook/builder-webpack5": "^6.5.10",
+    "@storybook/manager-webpack5": "^6.5.10",
+    "@storybook/react": "^6.5.10",
+    "@storybook/testing-library": "^0.0.13",
+    "babel-loader": "^8.2.5",
+    "cross-env": "^7.0.3",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "eslint-plugin-storybook": "^0.6.3",
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1"
+  }
+}
